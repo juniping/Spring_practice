@@ -3,6 +3,9 @@ package hello.core.member;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemoryMemberRepository implements MemberRepository{
 
 	// 실무에서는 동시성 이슈 때문에 concurrent hash map을 쓴다.
