@@ -1,4 +1,4 @@
-package hello.web;
+package hello.core.web;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Controller;
@@ -23,6 +23,7 @@ public class LogDemoController {
 		String requestURL = request.getRequestURL().toString();
 		MyLogger myLogger = myLoggerProvider.getObject();
 		myLogger.setRequestURL(requestURL);
+		System.out.println(myLogger);
 
 		myLogger.log("Controller Test");
 		logDemoService.logic("test id");

@@ -1,4 +1,4 @@
-package hello.web;
+package hello.core.web;
 
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Service;
