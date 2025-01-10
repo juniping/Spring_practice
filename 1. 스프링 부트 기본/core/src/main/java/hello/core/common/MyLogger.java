@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 @Component
 @Scope(value = "request")
@@ -28,6 +29,7 @@ public class MyLogger {
 		System.out.println("[" + uuid + "] request scope bean is ope ned : "  + this);
 	}
 
+	@PreDestroy
 	public void close(){
 		System.out.println("[" + uuid + "] request scope bean is closed : "  + this);
 	}
